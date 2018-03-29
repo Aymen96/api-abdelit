@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/docs/', function () {
+    return "These are the docs";
+});
+Route::get('/docs/posts/general', function () {
+    return view("posts.general");
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/overview', 'OverviewController@index')->name('overview');
